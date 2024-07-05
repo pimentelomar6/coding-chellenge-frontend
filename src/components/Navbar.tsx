@@ -31,9 +31,10 @@ export default function NavBar() {
         {links.map((link) => (
           <li key={link.name}>
             <Link
-              className={ styles.nav__link + ` ${
-                pathname === link.href ? styles.nav__link__select : ""
-              }  `}
+              className={
+                styles.nav__link +
+                ` ${pathname === link.href ? styles.nav__link__select : ""}  `
+              }
               href={link.href}
             >
               {link.name}

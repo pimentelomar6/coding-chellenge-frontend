@@ -26,7 +26,8 @@ export default function ContactForm() {
 
   return (
     <div className={styles.form__container}>
-      <form className={styles.form}
+      <form
+        className={styles.form}
         onSubmit={handleSubmit((data) => {
           console.log(data);
           reset();
@@ -40,7 +41,7 @@ export default function ContactForm() {
       >
         <label htmlFor="name">Nombre:</label>
         <input
-         className={styles.input__text}
+          className={styles.input__text}
           type="text"
           id="name"
           placeholder="Jean James"
@@ -51,7 +52,7 @@ export default function ContactForm() {
         )}
         <label htmlFor="email">Correo:</label>
         <input
-        className={styles.input__text}
+          className={styles.input__text}
           type="email"
           id="email"
           placeholder="jean_james@gmail.com"
@@ -61,16 +62,25 @@ export default function ContactForm() {
           <p className={styles.error}>{errors.email?.message}</p>
         )}
         <label htmlFor="message">Mensaje:</label>
-        <textarea  placeholder="Hola, es un placer saludarte . . ." className={styles.message__input} id="message" {...register("message")}></textarea>
+        <textarea
+          placeholder="Hola, es un placer saludarte . . ."
+          className={styles.message__input}
+          id="message"
+          {...register("message")}
+        ></textarea>
         {errors.message?.message && (
           <p className={styles.error}>{errors.message?.message}</p>
         )}
-        <button className={styles.form__btn} type="submit">Enviar</button>
+        <button className={styles.form__btn} type="submit">
+          Enviar
+        </button>
       </form>
 
       {sendSucces && (
         <div className={styles.msg__notification}>
-          <p className={styles.msg__notification__text}>Mensaje enviado exitosamente</p>
+          <p className={styles.msg__notification__text}>
+            Mensaje enviado exitosamente
+          </p>
         </div>
       )}
     </div>

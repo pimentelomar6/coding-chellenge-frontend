@@ -2,7 +2,6 @@ import Image from "next/image";
 import styles from "../app/ui/header.module.css";
 import NavBar from "./Navbar";
 
-
 export default function Header({
   children,
 }: Readonly<{
@@ -29,7 +28,7 @@ export default function Header({
         <div className={styles.left__col}>
           <div className={styles.img__container}>
             <Image
-            className={styles.img__profile}
+              className={styles.img__profile}
               src="/user.png"
               alt="Profile Image"
               width={120}
