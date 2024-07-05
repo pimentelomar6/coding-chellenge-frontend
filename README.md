@@ -42,8 +42,7 @@ Iniciar Servidor
 
 ## Testing
 
-- Vitest
-- jsdom
+- Jest
 - React Testing Library
 
 
