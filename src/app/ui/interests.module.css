@@ -1,0 +1,39 @@
+.interests__container {
+  opacity: 0;
+  transform: translateY(50px);
+
+  animation: fadeInUp 1s ease-in-out forwards;
+  animation-fill-mode: both;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.img {
+  max-width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 868px) {
+  .photos {
+    height: 165px;
+    overflow: auto;
+    padding: 0 0 30px;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
